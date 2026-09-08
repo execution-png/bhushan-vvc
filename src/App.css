@@ -1,6 +1,6 @@
-/* ================================
-   RESET
-================================ */
+/* =========================================
+   GLOBAL RESET
+========================================= */
 
 * {
   margin: 0;
@@ -9,9 +9,9 @@
 }
 
 
-/* ================================
+/* =========================================
    VARIABLES
-================================ */
+========================================= */
 
 :root {
   --blue: #087dcc;
@@ -23,9 +23,9 @@
 }
 
 
-/* ================================
+/* =========================================
    PAGE
-================================ */
+========================================= */
 
 .page {
   width: 100%;
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
 
-  padding: 35px 15px;
+  padding: 35px 20px;
 
   background:
     linear-gradient(
@@ -45,13 +45,15 @@
 }
 
 
-/* ================================
+/* =========================================
    CARD
-================================ */
+========================================= */
 
 .card {
   width: 100%;
-  max-width: 480px;
+  max-width: 600px;
+
+  margin: 0 auto;
 
   background: #ffffff;
 
@@ -64,9 +66,9 @@
 }
 
 
-/* ================================
+/* =========================================
    TOP BLUE AREA
-================================ */
+========================================= */
 
 .top-design {
   height: 125px;
@@ -84,9 +86,9 @@
 }
 
 
-/* ================================
+/* =========================================
    DECORATIVE CIRCLES
-================================ */
+========================================= */
 
 .circle {
   position: absolute;
@@ -126,9 +128,9 @@
 }
 
 
-/* ================================
-   TOP BRAND
-================================ */
+/* =========================================
+   TOP BRAND / LOGO
+========================================= */
 
 .top-brand {
   position: absolute;
@@ -136,19 +138,24 @@
   top: 25px;
   left: 30px;
 
-  color: white;
-
-  font-size: 13px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
 }
 
 
-/* ================================
+.top-logo-image {
+  width: 120px;
+  height: auto;
+
+  display: block;
+
+  max-width: 100%;
+}
+
+
+/* =========================================
    HERO
-================================ */
+========================================= */
 
 .hero {
   position: relative;
@@ -162,7 +169,9 @@
 }
 
 
-/* Decorative dots */
+/* =========================================
+   HERO DECORATIVE DOTS
+========================================= */
 
 .hero::after {
   content: "";
@@ -203,9 +212,10 @@
 }
 
 
-/* ================================
-   LOGO
-================================ */
+/* =========================================
+   OLD LOGO STYLES
+   Kept for compatibility
+========================================= */
 
 .logo-wrapper {
   width: 185px;
@@ -291,9 +301,9 @@
 }
 
 
-/* ================================
+/* =========================================
    HERO TEXT
-================================ */
+========================================= */
 
 .hero > * {
   position: relative;
@@ -361,9 +371,9 @@
 }
 
 
-/* ================================
+/* =========================================
    CONTACT
-================================ */
+========================================= */
 
 .contact-section {
   padding:
@@ -403,9 +413,9 @@
 }
 
 
-/* ================================
+/* =========================================
    CONTACT ICON
-================================ */
+========================================= */
 
 .contact-icon {
   width: 39px;
@@ -430,9 +440,9 @@
 }
 
 
-/* ================================
+/* =========================================
    CONTACT TEXT
-================================ */
+========================================= */
 
 .contact-content {
   flex: 1;
@@ -466,6 +476,8 @@
   line-height: 1.45;
 
   word-break: break-word;
+
+  overflow-wrap: anywhere;
 }
 
 
@@ -476,9 +488,9 @@
 }
 
 
-/* ================================
+/* =========================================
    ACTION BUTTONS
-================================ */
+========================================= */
 
 .actions {
   display: grid;
@@ -569,9 +581,9 @@
 }
 
 
-/* ================================
+/* =========================================
    ABOUT
-================================ */
+========================================= */
 
 .about {
   margin:
@@ -637,9 +649,9 @@
 }
 
 
-/* ================================
+/* =========================================
    SHARE
-================================ */
+========================================= */
 
 .share-section {
   margin:
@@ -740,9 +752,9 @@
 }
 
 
-/* ================================
+/* =========================================
    FOOTER
-================================ */
+========================================= */
 
 .footer {
   min-height: 62px;
@@ -773,9 +785,9 @@
 }
 
 
-/* ================================
+/* =========================================
    TOAST
-================================ */
+========================================= */
 
 .toast {
   position: fixed;
@@ -805,110 +817,430 @@
 }
 
 
-/* ================================
-   MOBILE
-================================ */
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
 
   .page {
-    padding: 0;
+    padding:
+      25px
+      16px;
   }
 
   .card {
-    max-width: 100%;
+    max-width: 600px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .page {
+    width: 100%;
 
     min-height: 100vh;
+
+    padding: 0;
+
+    display: block;
+  }
+
+
+  .card {
+    width: 100%;
+
+    max-width: none;
+
+    min-height: 100vh;
+
+    margin: 0;
 
     border-radius: 0;
 
     box-shadow: none;
   }
 
+
+  /* TOP */
+
   .top-design {
     height: 110px;
   }
 
+
+  .top-brand {
+    top: 22px;
+
+    left: 22px;
+  }
+
+
+  .top-logo-image {
+    width: 105px;
+
+    max-width: 42vw;
+
+    height: auto;
+  }
+
+
+  /* HERO */
+
   .hero {
     padding:
-      28px
+      27px
       22px
       23px;
   }
 
-  .contact-section {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .actions {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .logo-text {
-    font-size: 33px;
-  }
 
   .hero h1 {
-    font-size: 37px;
+    font-size:
+      clamp(
+        30px,
+        9vw,
+        38px
+      );
+
+    line-height: 1.08;
+
+    letter-spacing: -1.2px;
   }
+
 
   .designation {
-    font-size: 15px;
+    max-width: 100%;
 
-    letter-spacing: 2px;
+    font-size:
+      clamp(
+        13px,
+        3.8vw,
+        15px
+      );
+
+    line-height: 1.35;
+
+    letter-spacing: 1.8px;
   }
+
 
   .tagline {
+    max-width: 100%;
+
     font-size: 13px;
+
+    line-height: 1.65;
   }
+
+
+  /* CONTACT */
+
+  .contact-section {
+    padding:
+      3px
+      18px
+      14px;
+  }
+
+
+  .contact-item {
+    gap: 11px;
+
+    padding:
+      8px
+      3px;
+
+    margin: 12px 0;
+  }
+
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+  }
+
+
+  .contact-content {
+    min-width: 0;
+  }
+
+
+  .contact-value {
+    font-size: 13.5px;
+
+    line-height: 1.45;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+  }
+
+
+  .contact-arrow {
+    width: 14px;
+
+    min-width: 14px;
+  }
+
+
+  /* ACTIONS */
+
+  .actions {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 10px;
+
+    padding:
+      5px
+      18px
+      20px;
+  }
+
+
+  .action-button {
+    min-width: 0;
+
+    min-height: 50px;
+
+    padding:
+      9px
+      7px;
+
+    font-size: 12.5px;
+
+    gap: 6px;
+
+    white-space: nowrap;
+  }
+
+
+  /* ABOUT */
 
   .about {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin:
+      5px
+      15px
+      22px;
+
+    padding:
+      19px
+      17px;
+
+    border-radius: 17px;
   }
 
+
+  .section-heading h2 {
+    font-size: 19px;
+  }
+
+
+  .about p {
+    font-size: 12.5px;
+
+    line-height: 1.7;
+  }
+
+
+  /* SHARE */
+
   .share-section {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin:
+      0
+      15px
+      22px;
+
+    padding:
+      23px
+      16px;
+
+    border-radius: 17px;
+  }
+
+
+  .share-section h2 {
+    font-size: 18px;
+  }
+
+
+  .share-section p {
+    max-width: 100%;
+
+    font-size: 12px;
+  }
+
+
+  .share-button {
+    max-width: 100%;
+  }
+
+
+  /* FOOTER */
+
+  .footer {
+    min-height: 58px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    padding:
+      14px
+      18px;
+
+    line-height: 1.5;
+  }
+
+
+  /* TOAST */
+
+  .toast {
+    left: 14px;
+
+    right: 14px;
+
+    bottom: 18px;
+
+    width: auto;
+
+    transform: none;
+
+    text-align: center;
   }
 
 }
 
 
-/* ================================
-   VERY SMALL MOBILE
-================================ */
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
+
+  .top-logo-image {
+    width: 95px;
+  }
+
+
+  .hero {
+    padding-left: 18px;
+
+    padding-right: 18px;
+  }
+
+
+  .contact-section {
+    padding-left: 14px;
+
+    padding-right: 14px;
+  }
+
 
   .actions {
-    grid-template-columns: 1fr;
+    padding-left: 14px;
+
+    padding-right: 14px;
+
+    gap: 8px;
   }
+
+
+  .action-button {
+    min-height: 48px;
+
+    font-size: 12px;
+
+    padding-left: 5px;
+
+    padding-right: 5px;
+  }
+
+
+  .about,
+  .share-section {
+    margin-left: 12px;
+
+    margin-right: 12px;
+  }
+
+
+  .about {
+    padding:
+      17px
+      15px;
+  }
+
+
+  .share-section {
+    padding-left: 13px;
+
+    padding-right: 13px;
+  }
+
 
   .hero h1 {
-    font-size: 33px;
+    font-size: 29px;
   }
+
 
   .designation {
-    font-size: 13px;
+    font-size: 12.5px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
   }
+
+
+  .contact-item {
+    gap: 9px;
+  }
+
+
+  .contact-icon {
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+  }
+
 
   .contact-value {
     font-size: 13px;
   }
 
 }
-.top-brand {
-  display: flex;
-  align-items: center;
-}
 
-.top-logo-image {
-  width: 120px;
-  height: auto;
-  display: block;
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 340px) {
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+
+  .action-button {
+    min-height: 48px;
+  }
+
 }

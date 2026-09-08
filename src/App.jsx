@@ -1,4 +1,5 @@
 import { useState } from "react";
+import rentlaoLogo from "./assets/rentlao-logo.png";
 import {
   Phone,
   Mail,
@@ -123,22 +124,17 @@ Website: ${contact.website}`;
           <div className="circle circle-one"></div>
           <div className="circle circle-two"></div>
           <div className="circle circle-three"></div>
-
-          <div className="top-brand">
-            RENTLAO
+            <div className="top-brand">
+            <img
+              src={rentlaoLogo}
+              alt="RENTLAO"
+              className="top-logo-image"
+            />
           </div>
         </div>
 
         {/* HERO */}
         <section className="hero">
-
-          <div className="logo-wrapper">
-            <div className="logo-frame">
-              <div className="logo-text">
-                RENTLAO
-              </div>
-            </div>
-          </div>
 
           <p className="eyebrow">
             RENTAL & ASSET MANAGEMENT

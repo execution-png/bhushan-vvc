@@ -902,3 +902,13 @@
   }
 
 }
+.top-brand {
+  display: flex;
+  align-items: center;
+}
+
+.top-logo-image {
+  width: 120px;
+  height: auto;
+  display: block;
+}
